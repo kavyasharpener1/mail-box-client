@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import { Container , Form, Button,Row} from "react-bootstrap";
 import axios from "axios";
-import LoadingSpinner from "../UI/LoadingSpinner";
+// import LoadingSpinner from "../UI/LoadingSpinner";
 import { useDispatch } from "react-redux";
 import { AuthActions } from "../store/AuthSlice";
 import { NavLink, useNavigate } from "react-router-dom";
@@ -19,7 +19,7 @@ const Navigate=useNavigate()
         setIsLoading(true)
         if (password === confirmPassword) {
             try {
-                const response = await axios.post('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyAtjooTBGp2H_dBoZ2PToEXNiUg9e7w1UI', {
+                const response = await axios.post('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyCQLgSCOCKgHvQ7Dtn15lb4FzUS5C9HwKQ', {
                     email: email, password: password, returnSecureToken: true
                 })
               alert("User has successfully signed up.")

@@ -8,9 +8,9 @@ function ClientPage() {
     <Container className="mt-5 p-3" fluid>
       <Row>
         <Col>
-          <h1 className="mb-3">Welcome to Mail-Box</h1>
-          <p className="mb-4">Thank you for choosing Mailbox as your email provider.</p>
-          <p> With Mailbox, you can organize your email like never before and enjoy a clutter-free inbox.</p>
+          <h1 className="mb-3">Welcome to Mail-Box App </h1>
+          <p className="mb-4">Thank you for choosing Mailbox App </p>
+          <p> Let's Enjoy the App !!!!</p>
           <Button variant="dark" onClick={()=>Navigate('/Login')}>Get Started</Button>
         </Col>
       </Row>

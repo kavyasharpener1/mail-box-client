@@ -10,7 +10,7 @@ const ForgetPass=()=>{
         event.preventDefault()
         setIsLoading(true)
         try {
-            const response = await axios.post('https://identitytoolkit.googleapis.com/v1/accounts:sendOobCode?key=AIzaSyAtjooTBGp2H_dBoZ2PToEXNiUg9e7w1UI',
+            const response = await axios.post('https://identitytoolkit.googleapis.com/v1/accounts:sendOobCode?key=AIzaSyCQLgSCOCKgHvQ7Dtn15lb4FzUS5C9HwKQ',
             {requestType:"PASSWORD_RESET",email:emailRef.current.value})
             setData(response.data)
         } catch (error) {

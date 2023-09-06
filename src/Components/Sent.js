@@ -30,7 +30,7 @@ useEffect(()=>{
   setInbox(mailArr)
   }
   sendRequest({url:`
-  https://mailbox-7e70f-default-rtdb.firebaseio.com/${email}/sentbox.json`},TransferdData)
+  https://mailboxproject-31e59-default-rtdb.firebaseio.com/${email}/sentbox.json`},TransferdData)
 },[sendRequest])
 
 

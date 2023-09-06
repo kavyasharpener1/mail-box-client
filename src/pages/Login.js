@@ -16,7 +16,7 @@ const Navigate=useNavigate()
         event.preventDefault();
         setIsLoading(true)
             try {
-                const response = await axios.post('https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyAtjooTBGp2H_dBoZ2PToEXNiUg9e7w1UI', {
+                const response = await axios.post('https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyCQLgSCOCKgHvQ7Dtn15lb4FzUS5C9HwKQ', {
                     email: email, password: password, returnSecureToken: true
                 })
                 const emailid = response.data.email//.split('@')[0];

@@ -34,7 +34,7 @@ useEffect(()=>{
   dispatch(MailAction.MailArr(mailArr))
   }
   sendRequest({url:`
-  https://mailbox-7e70f-default-rtdb.firebaseio.com/${email}/inbox.json`},TransferdData )
+  https://mailboxproject-31e59-default-rtdb.firebaseio.com/${email}/inbox.json`},TransferdData )
   
 },[sendRequest])
 
@@ -47,7 +47,7 @@ const applyData=()=>{
     Navigate('/mailDetails')
 }
   sendRequest({url:`
-  https://mailbox-7e70f-default-rtdb.firebaseio.com/${email}/inbox/${mail.id}.json`,
+  https://mailboxproject-31e59-default-rtdb.firebaseio.com/${email}/inbox/${mail.id}.json`,
   method: 'PUT',
   body: { id:mail.id,Semail:mail.Semail,Remail:mail.Remail,subject:mail.subject,content:mail.content, date:mail.date, read:true },
   headers: {
@@ -61,7 +61,7 @@ const memoizedMailList = useMemo(() => {
   return inbox.map(mail=>(
     <tr style={{cursor:'pointer'}} key={mail.id}  onClick={openMailHandler.bind(null,mail)}>
       <td><App/></td>
-      <td>{!mail.read&&<Dot  color='blue'size={30} />}</td>
+      <td>{!mail.read&&<Dot  color='blue'size={40} />}</td>
       <td>{mail.subject}</td>
       <td>{mail.content.slice(0,10)}...</td>
       <td>{mail.date}</td>

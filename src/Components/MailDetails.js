@@ -14,7 +14,7 @@ const Navigate=useNavigate()
 const DeleteHandler=async()=>{
   try{
 await axios.delete(`
-https://mailbox-7e70f-default-rtdb.firebaseio.com/${email}/${node}/${mail.id}.json`)
+https://mailboxproject-31e59-default-rtdb.firebaseio.com/${email}/${node}/${mail.id}.json`)
 Navigate(-1)
   }catch(error){
     alert(error.respone.data.error.message)
