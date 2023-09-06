@@ -22,7 +22,7 @@ body {
 
 div#root {
   height: 100%; /* remove this line to see div.app is no more 100% height */
-  background-image:url("C:\Users\naikk\Downloads\PASTEL BACKGROUND.jpg");
+  background-color :cornflowerblue;
   padding: 1px
 }
 
