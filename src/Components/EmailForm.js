@@ -34,13 +34,13 @@ const handleSubmit = (event) => {
   const blocks = convertToRaw(editorState.getCurrentContent()).blocks;
 const value = blocks.map(block => (!block.text.trim() && '\n') || block.text).join("\n");
 
-sendRequest({url:`https://mailbox-7e70f-default-rtdb.firebaseio.com/${email}/sentbox.json`,  method: 'POST',
+sendRequest({url:`https://mailboxproject-31e59-default-rtdb.firebaseio.com/${email}/sentbox.json`,  method: 'POST',
 body: {Semail:mail,Remail:Remail,subject:subject, content:value, date:time,},
 headers: {
   'Content-Type': 'application/json',
 }})
 
-sendRequest({url:`https://mailbox-7e70f-default-rtdb.firebaseio.com/${remail}/inbox.json`,  method: 'POST',
+sendRequest({url:`https://mailboxproject-31e59-default-rtdb.firebaseio.com/${remail}/inbox.json`,  method: 'POST',
 body: {Semail:mail,Remail:Remail,subject:subject, content:value, date:time,read:false},
 headers: {
   'Content-Type': 'application/json',
@@ -93,7 +93,7 @@ Navigate('/sent')
           Send<SendFill/>
         </Button>
       </Form>
-      </Row>
+      </Row>/
     </Container>
     </>
   );
